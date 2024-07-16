@@ -3,6 +3,7 @@
 
 #include "napi/native_api.h"
 
-napi_value Add(napi_env, napi_callback_info);
+typedef napi_value (*AddWrapper)(napi_env, napi_callback_info);
+AddWrapper getAddFunc();
 
 #endif //TRYHARMONYNDK_ADD_H
